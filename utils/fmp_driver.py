@@ -27,4 +27,5 @@ class initfmp :
             data = json.loads(res.text)
             return data
         else :
-            print("Getting Data Error With {}".format(status_code))
+            e = "Getting Data Error With status code: {}".format(status_code)
+            raise Exception(e)
