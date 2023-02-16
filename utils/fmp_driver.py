@@ -2,6 +2,9 @@ import requests
 import json
 
 class initfmp :
+    """
+    FMP Api driver to get data with attached apikeys and main endpoint
+    """
     def __init__(self) :
         self.config = self.get_config()
         self.endpoint = self.config['fmp']['endpoint']

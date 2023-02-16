@@ -1,6 +1,6 @@
 CREATE TABLE delisted_companies (
-	symbol DATE PRIMARY KEY,
-	companyName STRING,
+	symbol STRING PRIMARY KEY,
+	company STRING,
 	exchange STRING,
 	ipoDate DATE,
     delistedDate DATE
