@@ -10,7 +10,6 @@ class dbInit :
             conn = sqlite3.connect("data.db")    
         except Exception as e:
             print(e)
-
         self.conn = conn
     
     def insert_historical_dividend(self, data:tuple) -> None:
