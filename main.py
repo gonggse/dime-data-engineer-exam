@@ -2,10 +2,21 @@ from utils.fmp_driver import initfmp
 from utils.db_driver import dbInit
 
 if __name__ == "__main__" :
+    # Init database driver the database file (data.db) will be automatically created
+    db = dbInit()
+
+    # Create delisted companies table
+    with open("./sql/delisted_companies_create.sql") as f :
+        delisted_companies_create_sql = f.read()
+    db.add_table(delisted_companies_create_sql)
+
+    # Create historical devidends table
+    with open("./sql/historical_dividends_create.sql") as f :
+        historical_dividends_create_sql = f.read()
+    db.add_table(historical_dividends_create_sql)
+
     # Init fmp connection driver
     fmp = initfmp()
-    # Init db
-    db = dbInit()
     
     #Get Historical-Dividends Data
     historical_diviends = {
@@ -29,15 +40,8 @@ if __name__ == "__main__" :
         db.insert_delisted_companies(data)
         print("INSERTED: ", data)
 
+    # Close db
     db.conn.close()
-
-    #####################################################
-    # to add more table 
-    # # example #
-
-    # sql = "CREATE TABLE test (name STRING PRIMARY KEY)"
-    # db.add_table(sql)
-
     
 
 
