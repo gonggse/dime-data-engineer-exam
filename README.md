@@ -26,7 +26,7 @@ The repo shows the process of getting FMP data and store the data.
 └── main.py
 ```
 
-**ER Dragram**
+**Table Info**
 
 
 **historical_dividends**
