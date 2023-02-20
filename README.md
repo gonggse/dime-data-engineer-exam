@@ -61,4 +61,4 @@ The repo shows the process of getting FMP data and store the data.
 - Sql Directory store the create table queries of 2 tables 
   - ```/utils/delisted_companies_create.sql``` creates ```delisted_companies``` table
   - ```/utils/fmp_driver.py``` is FMP Api handler creates ```historical_dividends``` table
-- Credentials contains ```credentials.config.json``` stores Apikeys of FMP Api (didnt store as a encrypted key, in vault/secret manager because want to focus the main process part)
+- Credentials contains ```credentials/config.json``` stores Apikeys of FMP Api (didnt store as a encrypted key, in vault/secret manager because want to focus the main process part)
